@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the page fit properly on a phone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | CV</title>
+
+  <style>
+    /* ---------- 1. Page basics ---------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #e8edf3;
+      color: #222222;
+      margin: 0;
+      padding: 30px 15px;
+      line-height: 1.6;
+    }
+
+    /* ---------- 2. The main card (sidebar + content side by side) ---------- */
+    .cv {
+      display: flex;              /* puts the two columns next to each other */
+      max-width: 900px;
+      margin: 0 auto;             /* centers the card */
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ---------- 3. Left column (dark) ---------- */
+    .sidebar {
+      width: 300px;
+      background-color: #14213d;
+      color: white;
+      padding: 35px 25px;
+    }
+    .sidebar h2 {
+      color: #5eead4;
+      font-size: 18px;
+      border-bottom: 1px solid #5eead4;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+    .sidebar a {
+      color: white;
+    }
+
+    /* The photo circle. Replace "me.jpg" with your own picture */
+    .photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;         /* 50% turns a square into a circle */
+      border: 4px solid #5eead4;
+      object-fit: cover;          /* stops the photo from looking stretched */
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Skill bars: grey bar behind, colored bar on top */
+    .bar {
+      background-color: #3a4a6b;
+      height: 8px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .fill {
+      background-color: #5eead4;
+      height: 8px;
+      border-radius: 4px;
+    }
+
+    /* ---------- 4. Right column (white) ---------- */
+    .content {
+      flex: 1;                    /* takes all the remaining space */
+      padding: 35px 40px;
+    }
+    .content h1 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      color: #14213d;
+      margin: 0;
+    }
+    .title {
+      font-size: 18px;
+      color: #0f766e;
+      margin: 5px 0 25px 0;
+    }
+    .content h2 {
+      font-family: Georgia, serif;
+      color: #14213d;
+      border-bottom: 2px solid #0f766e;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    /* Each education / project item gets a teal line on its left */
+    .item {
+      border-left: 3px solid #0f766e;
+      padding-left: 15px;
+      margin-bottom: 18px;
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+    .date {
+      color: #666666;
+      font-size: 14px;
+    }
+
+    /* ---------- 5. Phone screens: stack the columns ---------- */
+    @media (max-width: 700px) {
+      .cv {
+        flex-direction: column;   /* one column above the other */
+      }
+      .sidebar {
+        width: auto;
+      }
+      .content {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv">
+
+    <!-- ===== LEFT COLUMN ===== -->
+    <div class="sidebar">
+      <img class="photo" src="me.jpeg" alt="My photo">
+
+      <h2>Contact</h2>
+      <p>Email: saradrhuzaifashahzad@email.com</p>
+      <p>Phone: 03556574287</p>
+      <p>Rawalakot, Kashmir</p>
+      <p>GitHub: <a href="https://github.com/yourusername">yourusername</a></p>
+
+      <h2>Skills</h2>
+      <p>C++</p>
+      <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+
+      <p>HTML and CSS</p>
+      <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+
+      <p>Problem solving</p>
+      <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+
+      <p>Teamwork</p>
+      <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+
+      <h2>Languages</h2>
+      <p>English<br>Urdu</p>
+    </div>
+
+    <!-- ===== RIGHT COLUMN ===== -->
+    <div class="content">
+      <h1>Huzaifa Shahzad</h1>
+      <p class="title">Computer Science Student</p>
+
+      <h2>About Me</h2>
+      <p>
+        I am a first-semester Computer Science student at Air University
+        Islamabad. I am learning C++ and web development, and I like turning
+        a problem into working code, one small step at a time.
+      </p>
+
+      <h2>Education</h2>
+      <div class="item">
+        <h3>BS Computer Science</h3>
+        <div>Air University Islamabad</div>
+        <div class="date">2026 - Present</div>
+      </div>
+      <div class="item">
+        <h3>Intermediate (Fcs)</h3>
+        <div>Stars Science College Rawalakot</div>
+        <div class="date">2024 - 2026</div>
+      </div>
+
+      <div class="item">
+        <h3>This CV Website</h3>
+        <div class="date">HTML and CSS</div>
+        <div>Designed and coded by hand in VS Code and published on GitHub.</div>
+      </div>
+
+      <h2>Interests</h2>
+      <p>Programming, meditation, learning new things.</p>
+    </div>
+
+  </div>
+</body>
+</html>
